@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+     Jabatan
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card class="card-jabatan" *ngFor="let item of items">
+    <ion-card-content>
+        <ion-grid text-wrap>
+            <ion-row>
+              <ion-col size="5">
+                <h3>Kode Jabatan</h3>
+              </ion-col>
+              <ion-col size="1">
+                <h3>:</h3>
+              </ion-col>
+              <ion-col size="6">  
+                <h3>
+                  {{ item.kode_jabatan }}
+                </h3>
+              </ion-col>  
+            </ion-row>
+            <ion-row>
+                <ion-col size="5">
+                  <h3>Nama Jabatan</h3>
+                </ion-col>
+                <ion-col size="1">
+                  <h3>:</h3>
+                </ion-col>
+                <ion-col size="6">  
+                  <h3>{{ item.nama_jabatan }}</h3>
+                </ion-col>  
+            </ion-row>
+            <ion-row>
+              <ion-col size="5">
+                <h3>Tunjangan Jabatan</h3>
+              </ion-col>
+              <ion-col size="1">
+                <h3>:</h3>
+              </ion-col>
+              <ion-col size="6">  
+                <h3>{{ item.tunjangan_jabatan }}</h3>
+              </ion-col>  
+          </ion-row>
+            </ion-grid>
+    </ion-card-content>
+</ion-card>
+
+</ion-content>
